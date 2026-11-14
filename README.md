@@ -4,6 +4,23 @@
 
 不是定时任务——到点先"想"，可以什么都不做。
 
+## 安装
+
+仓库直装（npm 版本暂未发布）：
+
+```powershell
+dsh plugin --profile desktop add github:crystal92613/dsh-heartbeat-random
+```
+
+钉版本：
+
+```powershell
+dsh plugin --profile desktop add github:crystal92613/dsh-heartbeat-random#vX.Y.Z
+```
+
+装完还要把包名加进该 profile 的 `package.json → dsh.profile.bundles`，否则宿主不会加载；改完**重启 DSH**。
+装完在 设置 → 心跳 里先选工作区与会话，再配置节律。
+
 ## 概念
 
 - **目标**：一个目标 = 主会话 + 内心会话，逐对独立配置（节律、行为池、提示词、模型、超时）。
